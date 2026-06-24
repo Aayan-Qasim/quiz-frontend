@@ -19,7 +19,7 @@ async function handleResponse(response: Response) {
     try {
       const errorData = await response.json();
       message = errorData.message || message;
-    } catch (_) {}
+    } catch (_) { }
     throw new Error(message);
   }
   return response.json();
