@@ -241,12 +241,12 @@ export function QuestionManager({ token }: QuestionManagerProps) {
         const colIndices = {
           category: headers.indexOf('category'),
           questionText: headers.findIndex(h => h.includes('question') || h === 'qtext' || h === 'text'),
-          optionA: headers.findIndex(h => h === 'optiona' || h === 'a' || h.endsWith('opta')),
+          optionA: headers.findIndex(h => h === 'optiona' || h === 'options' || h === 'a' || h.endsWith('opta')),
           optionB: headers.findIndex(h => h === 'optionb' || h === 'b' || h.endsWith('optb')),
           optionC: headers.findIndex(h => h === 'optionc' || h === 'c' || h.endsWith('optc')),
           optionD: headers.findIndex(h => h === 'optiond' || h === 'd' || h.endsWith('optd')),
           correctAnswer: headers.findIndex(h => h.includes('correct') || h === 'answer' || h === 'ans' || h === 'rightoption'),
-          explanation: headers.findIndex(h => h.includes('explain') || h.includes('rational') || h === 'desc' || h === 'reason')
+          explanation: headers.findIndex(h => h.includes('explan') || h.includes('explain') || h.includes('rational') || h === 'desc' || h === 'reason')
         };
 
         const parsedQuestions: any[] = [];
