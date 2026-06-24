@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://quiz-backend-ten-orpin.vercel.app/api';
 
 // Helper to get headers with dynamic Authorization token
 function getHeaders(token?: string | null) {
