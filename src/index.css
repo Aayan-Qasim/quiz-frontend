@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom high fidelity design colors */
+  --color-indigo-150: #e0e7ff;
+  --color-indigo-505: #6366f1;
+  --color-indigo-650: #4f46e5;
+  --color-indigo-750: #4338ca;
+  --color-indigo-755: #3730a3;
+  --color-slate-150: #f1f5f9;
+  --color-slate-205: #e2e8f0;
+  --color-slate-350: #cbd5e1;
+  --color-slate-450: #94a3b8;
+  --color-slate-455: #64748b;
+  --color-slate-655: #475569;
+  --color-slate-705: #334155;
+  --color-slate-755: #1e293b;
+  --color-slate-805: #0f172a;
+  
+  --color-emerald-205: #a7f3d0;
+  --color-emerald-250: #6ee7b7;
+
+  /* Custom dark theme colors */
+  --color-slate-750: #1a2333;
+  --color-slate-850: #111827;
+  --color-slate-950: #030712;
+}
+
+body {
+  font-family: var(--font-sans);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Custom High Density Theme utility classes */
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.table-row:hover {
+  background-color: #f1f5f9;
+}
+
+.badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+/* High Fidelity Dark Mode stylesheet adjustments */
+.dark body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+}
+
+.dark header {
+  background-color: #111827 !important;
+  border-color: #1f2937 !important;
+}
+
+.dark aside {
+  background-color: #111827 !important;
+  border-color: #1f2937 !important;
+}
+
+.dark main {
+  background-color: #0b0f19 !important;
+}
+
+.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0b0f19 !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1f2937 !important;
+}
+
+.dark .border-slate-200,
+.dark .border-slate-200\/90,
+.dark .border-slate-200\/95,
+.dark .border-slate-150,
+.dark .border-slate-100 {
+  border-color: #1f2937 !important;
+}
+
+.dark .border-indigo-100,
+.dark .border-indigo-200 {
+  border-color: #312e81 !important;
+}
+
+.dark .bg-indigo-50\/40,
+.dark .bg-indigo-50 {
+  background-color: rgba(49, 46, 129, 0.15) !important;
+}
+
+.dark .text-slate-800,
+.dark .text-slate-900,
+.dark .text-slate-850,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5 {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark .text-slate-555 {
+  color: #e5e7eb !important;
+}
+
+.dark .text-slate-400,
+.dark .text-slate-500 {
+  color: #9ca3af !important;
+}
+
+.dark .stat-card {
+  background: #111827;
+  border-color: #1f2937;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark tbody tr:hover,
+.dark .table-row:hover {
+  background-color: #1e293b !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #6366f1 !important;
+}
+
+.dark .bg-emerald-50 {
+  background-color: rgba(6, 78, 59, 0.2) !important;
+}
+
+.dark .text-emerald-800,
+.dark .text-emerald-700 {
+  color: #34d399 !important;
+}
+
+.dark .border-emerald-250,
+.dark .border-emerald-200,
+.dark .border-emerald-100 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .bg-rose-50 {
+  background-color: rgba(159, 18, 57, 0.2) !important;
+}
+
+.dark .text-rose-700,
+.dark .text-rose-800 {
+  color: #f87171 !important;
+}
+
+.dark .border-rose-200 {
+  border-color: rgba(244, 63, 94, 0.3) !important;
+}
+
+.dark select option {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}
+
+.dark .shadow-xs,
+.dark .shadow-2xs {
+  box-shadow: none !important;
+}
